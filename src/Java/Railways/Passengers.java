@@ -14,10 +14,14 @@ public class Passengers {
     String startCity;
     String endCity;
     Date strDate;
+    long[] contactNumber;
 
     public Passengers(int passengerNumber) {
+
         age = new int[passengerNumber];
+        contactNumber = new long[passengerNumber];
     }
+
 
     public  void getName(int passengerNumber) {
 
@@ -37,6 +41,16 @@ public class Passengers {
             scanner.nextLine();
         }
     }
+    public void getContactNumber(int passengerNumber) {
+        System.out.println();
+        for (int i = 0; i < passengerNumber; i++) {
+            System.out.println("Enter the Contact Number of Passenger " + (i+1) + " : ");
+            contactNumber[i] = scanner.nextLong();
+            scanner.nextLine();
+        }
+
+    }
+
 
 //    public void checkAge(int[] age ) {
 //        for (int j : age) {
@@ -78,10 +92,11 @@ public class Passengers {
         for (int i = 0; i < passengerNumber; i++) {
             String name = fullName.get(i);
             int passengerAge = age[i];
+            long contact = contactNumber[i];
             System.out.println("\nThe Details of Passenger " + (i+1) + " is: ");
-            System.out.println("\tName: " + name + " , " + " Age: " + passengerAge);
+            System.out.println("\tName: " + name + " , " + "  Age: " + passengerAge + "   Contact Number: " + contact);
             System.out.println("\tBoarding At: " + startCity + "   Destination: " + endCity );
-            System.out.println("Travelling Date: " +strDate);
+            //System.out.println("Travelling Date: " +strDate);
 
         }
     }

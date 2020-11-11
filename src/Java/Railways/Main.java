@@ -19,8 +19,10 @@ public class Main {
 
         ob_1.getAge(passengerNumber);
 
+        ob_1.getContactNumber(passengerNumber);
+
         ob_1.getStartCity();
-        ob_1.getDate();
+        //ob_1.getDate();
 
         ob_1.printPassengerDetails(passengerNumber);
 
