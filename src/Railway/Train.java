@@ -74,10 +74,12 @@ public class Train {
 
             Statement statement = c.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("select * from train where start_city='hyd'");//3
+            ResultSet resultSet = statement.executeQuery("select * from train where start_city='hyd' and end_city='pune'");
             while (resultSet.next()) {
                 newMap.put("TRAIN NO ", resultSet.getString("train_no"));
                 newMap.put("FARE ",resultSet.getString("fare"));
+                newMap.put("START CITY ",resultSet.getString("start_city"));
+                newMap.put("DESTINATION ",resultSet.getString("end_city"));
 
             }
         } catch (Exception e) {

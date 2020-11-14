@@ -8,6 +8,8 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("\tWelcome Railways\t");
+        System.out.println("                     ");
+        System.out.println("ROUTES AVAILABLE: pune->hyd  vizag->kolkata ");
 
         System.out.print("Enter the Number of Passenger: ");
         int passengerNumber = scanner.nextInt();
