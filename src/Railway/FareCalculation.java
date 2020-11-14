@@ -1,4 +1,4 @@
-package Java.Railways;
+package Railway;
 
 import java.util.ArrayList;
 import java.util.Scanner;

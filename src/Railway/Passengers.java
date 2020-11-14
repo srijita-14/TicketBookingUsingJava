@@ -1,4 +1,4 @@
-package Java.Railways;
+package Railway;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -52,26 +52,20 @@ public class Passengers {
     }
 
 
-//    public void checkAge(int[] age ) {
-//        for (int j : age) {
-//            if (j <= 12) {
-//                System.out.println("");
-//
-//
-//          } else if (j > 12 && j <= 60) {
-//
-//           } else if (j > 60) {
-//
-//            }
-//        }
-//    }
-    public void getStartCity() {
-        System.out.print("\nEnter the Start Station: ");
+    public String getStartCity() {
+        System.out.print("Enter the Start Station: ");
         startCity = scanner.nextLine();
         //scanner.nextLine();
-        System.out.print("Enter the Destination: ");
-        endCity = scanner.nextLine();
+        //System.out.print("Enter the Destination: ");
+       // endCity = scanner.nextLine();
         //scanner.nextLine();
+        return startCity;
+    }
+    public String getEndCity(){
+        System.out.println("Enter the End station: ");
+        endCity= scanner.nextLine();
+        return endCity;
+
     }
     public void getDate() {
 
