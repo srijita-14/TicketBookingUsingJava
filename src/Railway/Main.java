@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println("\tWelcome Railways\t");
         System.out.println("                     ");
-        System.out.println("ROUTES AVAILABLE: pune->hyd  vizag->kolkata ");
+        System.out.println("ROUTES AVAILABLE: hyd->pune  vizag->kolkata ");
 
         System.out.print("Enter the Number of Passenger: ");
         int passengerNumber = scanner.nextInt();
@@ -31,17 +31,14 @@ public class Main {
         ti.setEndCity(ob_1.getEndCity());
         System.out.println("Ticket start station: "+ti.getStartCity());
 
-        //System.out.println("Trains available: "+ ti.setStartCity(ob_1.getStartCity()));
 
 
         ob_1.printPassengerDetails(passengerNumber);
 
         Train t=new Train();
 
-        t.getTrainInfo();
 
-        // t.setStartCity(ob_1.getStartCity());
-        //  t.setEndCity(ob_1.getEndCity());
+
 
         System.out.println("THANK YOU! YOUR TICKET HAS BEEN BOOKED. DETAILS:-");
         System.out.println("Train Details "+ t.getTrainInfo());
