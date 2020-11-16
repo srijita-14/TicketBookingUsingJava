@@ -41,7 +41,9 @@ public class Main {
 
 
         System.out.println("THANK YOU! YOUR TICKET HAS BEEN BOOKED. DETAILS:-");
-        System.out.println("Train Details "+ t.getTrainInfo());
+        System.out.println("Train Details "+ t.getTrainInfo(ti.getStartCity(),ti.getEndCity()));
+
+        Map<String, String> TrainInfoMap = t.getTrainInfo(ti.getStartCity(), ti.getEndCity());
 
 
 

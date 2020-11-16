@@ -15,7 +15,7 @@ public class Train {
     private Double trainFare;
     private int trainNumber;
     private int numberOfSeats;
-   private Map<String, String> newMap = new HashMap<>();
+    private Map<String, String> newMap = new HashMap<>();
 
     public int getNumberOfSeats() {
         return numberOfSeats;
@@ -66,21 +66,21 @@ public class Train {
         return trainNumber;
     }
 
-    public Map getTrainInfo() {
+    public Map getTrainInfo(String startCity,String endCity) {
         Connection c = null;
         try {
-           // Map<String, String> newMap = new HashMap<>();
+            // Map<String, String> newMap = new HashMap<>();
             c = PostgresManager.getConnection();
 
             Statement statement = c.createStatement();
-
-            ResultSet resultSet = statement.executeQuery("select * from train where start_city='hyd' and end_city='pune'");
-             while (resultSet.next()) {
-                 newMap.put("TRAIN NO ", resultSet.getString("train_no"));
-                 newMap.put("FARE ", resultSet.getString("fare"));
-                 newMap.put("START CITY ", resultSet.getString("start_city"));
-                 newMap.put("DESTINATION ", resultSet.getString("end_city"));
-             }
+            System.out.println("select * from train where start_city="+ startCity +" and end_city="+ endCity);
+            ResultSet resultSet = statement.executeQuery("select * from train where start_city='"+ startCity +"' and end_city='"+ endCity+"'");
+            while (resultSet.next()) {
+                newMap.put("TRAIN NO ", resultSet.getString("train_no"));
+                newMap.put("FARE ", resultSet.getString("fare"));
+                newMap.put("START CITY ", resultSet.getString("start_city"));
+                newMap.put("DESTINATION ", resultSet.getString("end_city"));
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
